@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 public class ReflectionUtil {
 
+
+    //TODO 结果集反射成对象失败了
     public static void setProTOBeanFromResult(Object entity, ResultSet resultSet) throws SQLException {
         System.out.println("resultSet反射成对象");
         ResultSetMetaData rsmd = resultSet.getMetaData();
