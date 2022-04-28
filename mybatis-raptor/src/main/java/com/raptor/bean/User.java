@@ -9,6 +9,6 @@ import lombok.Data;
  */
 @Data
 public class User {
-    int id;
+    Integer id;
     String nickname;
 }

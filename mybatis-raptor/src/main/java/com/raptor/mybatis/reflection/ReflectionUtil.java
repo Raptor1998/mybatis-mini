@@ -12,13 +12,11 @@ public class ReflectionUtil {
     public static void setProTOBeanFromResult(Object entity, ResultSet resultSet) throws SQLException {
         System.out.println("resultSet反射成对象");
         ResultSetMetaData rsmd = resultSet.getMetaData();
-
-
         int columnCount = rsmd.getColumnCount();
         Field[] declaredFields = entity.getClass().getDeclaredFields();
         for (int i = 0; i < columnCount; i++) {
 
-            String columnName = rsmd.getCatalogName(i + 1).replace("_", "").toUpperCase();
+            String columnName = rsmd.getColumnName(i + 1).replace("_", "").toUpperCase();
             for (int j = 0; j < declaredFields.length; j++) {
                 String filedName = declaredFields[j].getName().toUpperCase();
                 if (columnName.equalsIgnoreCase(filedName)) {

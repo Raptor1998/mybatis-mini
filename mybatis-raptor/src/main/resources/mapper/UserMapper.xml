@@ -8,4 +8,11 @@
         from user
         where id = #{id}
     </select>
+    <!--    User selectUserByIdAndName(int id,String nickname);-->
+    <select id="selectUserByIdAndName" resultType="com.raptor.bean.User">
+        select *
+        from user
+        where id = #{id}
+          and nickname = #{nickname}
+    </select>
 </mapper>

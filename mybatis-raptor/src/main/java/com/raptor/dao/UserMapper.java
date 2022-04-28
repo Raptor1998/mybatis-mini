@@ -9,4 +9,6 @@ import com.raptor.bean.User;
  */
 public interface UserMapper {
     User selectUser(int id);
+
+    User selectUserByIdAndName(int id,String nickname);
 }

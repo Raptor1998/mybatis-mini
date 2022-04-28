@@ -33,6 +33,7 @@ public class XMLConfigBuilder {
 //        final String sql = "select * from user where id = #{id}";
         //为了简单  直接将sql更改为预编译sql
         final String sql = "select * from user where id = ?";
+        //final String sql = "select * from user where id = ? and nickname = ?";
 
 
         MyMapperStatement myMapperStatement = new MyMapperStatement(namespace, id, parameterType, resultType, sql);

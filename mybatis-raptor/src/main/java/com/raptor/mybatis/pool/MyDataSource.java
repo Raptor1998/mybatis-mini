@@ -31,6 +31,7 @@ public class MyDataSource implements MyDataSourceInterface {
         return instance;
     }
 
+    @Override
     public synchronized Connection getConnection() {
         if (pool.size() > 0) {
             Connection connection = pool.get(0);

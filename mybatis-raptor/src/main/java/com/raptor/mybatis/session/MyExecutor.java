@@ -61,7 +61,6 @@ public class MyExecutor {
     private <T> void handleResultSet(ResultSet resultSet, List<T> resultList, String resultType) {
         try {
             Class<?> aClass = Class.forName(resultType);
-
             while (resultSet.next()) {
                 Object entity = aClass.newInstance();
                 //吧从数据库查询出来的结果集字段设置到entity对象中去
