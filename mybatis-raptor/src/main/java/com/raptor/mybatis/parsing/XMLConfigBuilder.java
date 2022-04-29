@@ -16,9 +16,9 @@ public class XMLConfigBuilder {
 
     public MyConfiguration parse() {
         final String driver = "com.mysql.jdbc.Driver";
-        final String url = "jdbc:mysql://182.254.146.46:3306/testdata?useUnicode=true";
+        final String url = "jdbc:mysql://localhost:3306/testdata?useUnicode=true";
         final String username = "root";
-        final String password = "Cwh032308....";
+        final String password = "123456";
         MyEnvironment myEnvironment = new MyEnvironment(driver, url, username, password);
 
         Map<String, MyMapperStatement> mapperStatementMap = new HashMap<>();
