@@ -4,7 +4,7 @@
 ## 思路
 
 1. 读取xml配置文件的信息
-2. 创建一个SqlSessionFactory，并解析mybatis-config.xml和xxMapper.xml的信息
+2. 创建一个SqlSessionFactory，并解析mybatis-config.xml和xxMapper.xml的信息（简化了步骤，直接在解析过程中赋值了）
 3. 将解析的结果封装到一个Configuration中，包括Environment，表示数据库的一些连接信息；
    和一个Map<String, MapperStatement>，其中key的表示是namespace+id，MapperStatement存储相关的sql信息
 4. 调用openSession方法，其中SqlSession中包括前面解析的配置类和一个执行器Executor。
